@@ -38,13 +38,17 @@ body {
   line-height: 1.6;
 }
 
+section {
+  padding: 2em 1em;
+}
+
 img {
   display: block;
   max-width: 100%;
 }
 
 h1, h2, h3 {
-  line-height: 1.2;
+  line-height: 1;
   margin: 0
 }
 
@@ -73,4 +77,8 @@ h3 {
 .section__subtitle--about{
   font-family: var(--ff-secondary);
   background: var(--clr-accent);
+}
+
+.section__title--intro strong {
+  display: block;
 }
