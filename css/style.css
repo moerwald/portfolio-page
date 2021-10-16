@@ -13,6 +13,7 @@
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  --width-max: 1200px;
 }
 
 @media (min-width: 800px) {
@@ -65,6 +66,33 @@ h3 {
   font-size: var(--fs-h3);
 }
 
+:focus {
+  outline-offset: 3px;
+  outline-style: solid;
+  outline-width: 3px;
+  outline-color: var(--clr-accent);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: .5em 3em;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: var(--fw-bold);
+  transition-duration: 200ms;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
 .section__title {
   margin-bottom: .25em;
   font-weight: var(--fw-regular);
@@ -73,6 +101,7 @@ h3 {
 .section__subtitle {
   margin: 0;
   font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
 }
 
 .section__subtitle--intro, .section__subtitle--about {
@@ -143,6 +172,8 @@ nav {
   background-blend-mode: multiply;
   color: var(--clr-light);
   text-align: center;
+  max-width: var(--width-max);
+  margin: 0 auto;
 }
 
 .section__title--services {
@@ -159,13 +190,59 @@ nav {
   opacity: 0.5;
 }
 
+.services {
+  margin-bottom: 3em;
+}
+
+.service {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 @media (min-width: 800px) {
   .services {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 1em;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: var(--width-max);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.about-me {
+  max-width: var(--width-max);
+  margin: 0 auto;
+}
+  .about-me__img {
+    box-shadow: var(--bs);
   }
 
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-areas: "title img" "subtitle img" "description img";
+    grid-template-columns: 1fr 250px;
+    grid-column-gap: 2em;
+  }
+
+  .about-me__img {
+    grid-area: img;
+    margin: auto;
+    min-width: 200px;
+    z-index: 2;
+  }
+
+  .section__subtitle--about {
+    position: relative;
+    width: calc(100% + 1.5em);
+    align-self: start;
+    grid-column: -1/1;
+    grid-row: 2;
+    position: relative;
+  }
+
+  .about-me__body {
+    grid-area: description;
+  }
 }
