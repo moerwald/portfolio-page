@@ -12,8 +12,7 @@
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
-  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
-        0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 800px) {
@@ -119,22 +118,54 @@ nav {
     grid-template-areas: "img title" "img subtitle";
     grid-template-columns: min-content max-content;
   }
-
   .intro__img {
     grid-area: img;
     min-width: 250px;
     z-index: 2;
   }
-
   .section__subtitle--intro {
     align-self: start;
-    
     grid-column: -1/1;
     grid-row: 2;
-
     text-align: right;
     position: relative;
     left: -1.5em;
     width: calc(100% + 1.5em);
   }
+}
+
+/* services */
+
+.my-services {
+  background-color: var(--clr-dark);
+  background-image: url(https://www.unsplash.it/600/300);
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.section__title--services {
+  color: var(--clr-accent);
+}
+
+.section__title--services::after {
+  content: '  ';
+  display: block;
+  height: 0.01em;
+  width: 10%;
+  margin: .5em auto 1em;
+  background-color: var(--clr-light);
+  opacity: 0.5;
+}
+
+@media (min-width: 800px) {
+  .services {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
 }
