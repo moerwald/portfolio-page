@@ -126,6 +126,11 @@ nav {
   display: none;
 }
 
+.logo > p {
+  display: inline;
+  width: min-content;
+}
+
 .intro {
   position: relative;
 }
@@ -214,9 +219,10 @@ nav {
   max-width: var(--width-max);
   margin: 0 auto;
 }
-  .about-me__img {
-    box-shadow: var(--bs);
-  }
+
+.about-me__img {
+  box-shadow: var(--bs);
+}
 
 @media (min-width: 600px) {
   .about-me {
@@ -226,14 +232,12 @@ nav {
     grid-template-columns: 1fr 250px;
     grid-column-gap: 2em;
   }
-
   .about-me__img {
     grid-area: img;
     margin: auto;
     min-width: 200px;
     z-index: 2;
   }
-
   .section__subtitle--about {
     position: relative;
     width: calc(100% + 1.5em);
@@ -242,7 +246,6 @@ nav {
     grid-row: 2;
     position: relative;
   }
-
   .about-me__body {
     grid-area: description;
   }
