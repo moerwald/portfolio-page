@@ -13,7 +13,7 @@
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
-  --width-max: 1200px;
+  --width-max: 1000px;
 }
 
 @media (min-width: 800px) {
@@ -221,6 +221,7 @@ nav {
 @media (min-width: 600px) {
   .about-me {
     display: grid;
+    grid-template-rows: .5fr .5fr 2fr;
     grid-template-areas: "title img" "subtitle img" "description img";
     grid-template-columns: 1fr 250px;
     grid-column-gap: 2em;
