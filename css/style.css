@@ -224,6 +224,10 @@ nav {
   box-shadow: var(--bs);
 }
 
+.section__subtitle--about{
+  display: inline;
+}
+
 @media (min-width: 600px) {
   .about-me {
     display: grid;
