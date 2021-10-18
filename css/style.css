@@ -121,6 +121,12 @@ h3 {
     display: block;
 }
 
+.section__subtitle--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 1em;
+}
+
 
 /* header */
 
@@ -265,7 +271,7 @@ nav {
 @media (min-width: 600px) {
     .about-me {
         display: grid;
-        grid-template-rows: .5fr .5fr 2fr;
+        grid-template-rows: .5fr .5fr 4fr;
         grid-template-areas: "title img" "subtitle img" "description img";
         grid-template-columns: 1fr 250px;
         grid-column-gap: 2em;
@@ -287,4 +293,38 @@ nav {
     .about-me__body {
         grid-area: description;
     }
+}
+
+
+/* my-work */
+
+.my-work {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 0;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.portfolio__item {
+    background-color: var(--clr-accent);
+    overflow: hidden;
+    min-width: 300px;
+    width: min-content;
+    margin: 0 auto;
+}
+
+.portfolio__img {
+    transition: transform 750ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear;
+}
+
+.portfolio__img:hover {
+    transform: scale(1.2);
+    opacity: .75;
 }
