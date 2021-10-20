@@ -198,10 +198,9 @@ header {
 }
 
 .byteBearImg {
-    min-width: 100px;
+    width: 100px;
     display: inline;
     margin: 1rem;
-    width: min-content;
     padding: .5rem;
 }
 
