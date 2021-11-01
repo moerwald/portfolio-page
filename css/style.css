@@ -134,6 +134,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .nav {
@@ -170,13 +171,39 @@ header {
     color: var(--clr-accent);
 }
 
+
+.hamburger {
+    position: relative;
+    display: block;
+}
+
+.hamburger::after,
+.hamburger::before,
 .hamburger {
     background-color: var(--clr-dark);
     width: 2em;
     height: 3px;
     border-radius: 1em;
-    display: block;
-    position: relative;
+}
+
+
+
+.hamburger::after,
+.hamburger::before
+{
+    content: ' ';
+    position: absolute;
+    left: 0;
+    right: 0;
+
+}
+
+.hamburger::before
+{
+    top: 6px;
+}
+.hamburger::after{
+    bottom: 6px;
 }
 
 .logo {
@@ -210,7 +237,14 @@ header {
 }
 
 .nav-toggle {
-    display: inline;
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
 }
 
 @media (min-width: 600px) {
