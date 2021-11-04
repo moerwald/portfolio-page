@@ -193,10 +193,8 @@ header {
         font-family: var(--ff-secondary);
         color: var(--clr-light);
         width: 100%;
-        position: fixed;
-        top: 0;
-        z-index: 1000;
     }
+
     .nav__list {
         flex-direction: row;
     }
@@ -320,7 +318,6 @@ header {
         display: grid;
         width: min-content;
         margin: 0 auto;
-        padding-top: 7rem;
         grid-column-gap: 1em;
         grid-template-areas: "img title" "img subtitle";
         grid-template-columns: min-content max-content;
