@@ -11,6 +11,7 @@
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
+    --fs-nav: 2.25rem;
     --fs-body: 1rem;
     --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
     --width-max: 1000px;
@@ -21,6 +22,7 @@
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
+        --fs-nav: 1.5rem;
         --fs-body: 1.125rem;
     }
 }
@@ -135,6 +137,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 .nav {
@@ -159,7 +162,7 @@ header {
     height: 100%;
     padding: 0;
     margin: 0;
-    font-size: var(--fs-h2);
+    font-size: var(--fs-nav);
     font-weight: var(--fw-bold);
 }
 
@@ -178,9 +181,29 @@ header {
     border: 0;
     cursor: pointer;
     position: absolute;
-    right: 1em;
-    top: 1em;
+    right: 2em;
+    top: 2em;
     z-index: 1000;
+}
+
+@media (min-width: 800px) {
+    .nav {
+        all: initial;
+        background-color: var(--clr-dark);
+        font-family: var(--ff-secondary);
+        color: var(--clr-light);
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+    .nav__list {
+        flex-direction: row;
+    }
+    .nav__item {
+        padding: .5em;
+    }
+    .nav-toggle {
+        display: none;
+    }
 }
 
 .hamburger {
@@ -253,10 +276,12 @@ header {
 }
 
 .byteBearImg {
-    width: 100px;
+    width: 250px;
     display: inline;
     margin: 1rem;
     padding: .5rem;
+    background-color: var(--clr-dark);
+    opacity: 1;
 }
 
 .logo_delimiter {
